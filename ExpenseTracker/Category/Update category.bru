@@ -1,0 +1,26 @@
+meta {
+  name: Update category
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:3000/api/v1/category/update/68a4559eda92be52d7aed524
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: bear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTNiZTdkNzZlYTE5ZmViNTA1NjU0ZiIsImlhdCI6MTc1NTgwNDA3MiwiZXhwIjoxNzU1ODQwMDcyfQ.2TDHBEg9Wjb4TkdqmdL6P0M10LKDkGWnKSoXpWcsorc
+}
+
+body:json {
+  {
+    "name":"gloassary",
+    "type":"income"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

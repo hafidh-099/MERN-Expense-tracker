@@ -1,0 +1,19 @@
+meta {
+  name: Delete transaction
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:3000/api/v1/transaction/delete/68a4c3fc7a13a55d11add1c9
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: bear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTNiZTdkNzZlYTE5ZmViNTA1NjU0ZiIsImlhdCI6MTc1NTgwNDA3MiwiZXhwIjoxNzU1ODQwMDcyfQ.2TDHBEg9Wjb4TkdqmdL6P0M10LKDkGWnKSoXpWcsorc
+}
+
+settings {
+  encodeUrl: true
+}

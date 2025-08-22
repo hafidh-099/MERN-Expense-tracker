@@ -25,16 +25,16 @@ const transactionSchema = new mongoose.Schema(
       type: Date,
       default: Date.now,
     },
-    discription: {
+    description: {
       type: String,
       required: true,
     },
   },
   { timestamps: true }
 );
-const transactionModel = mongoose.model(
+const TransactionModel = mongoose.model(
   "TransactionModel",
   transactionSchema,
   "transactionCollection"
 );
-module.exports = transactionModel;
+module.exports = TransactionModel;

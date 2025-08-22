@@ -73,8 +73,7 @@ exports.ChangePass = asyncHandler(async (req, res) => {
   const hashPass = bcrypt.hashSync(newPass, 10);
   user.password = hashPass;
   //resave
-  const x = await user.save();
-  console.log(x);
+  await user.save();
   res.json({ message: "password change success" });
 });
 exports.updateUserProfile = asyncHandler(async (req, res) => {
@@ -82,7 +81,7 @@ exports.updateUserProfile = asyncHandler(async (req, res) => {
   const update = await userModel.findByIdAndUpdate(
     { _id: req.user },
     { username, email },
-    { new: true }//i.e we want to return updated record
+    { new: true } //i.e we want to return updated record
   );
-  res.json({message:"update profile success",update})
+  res.json({ message: "update profile success", update });
 });
